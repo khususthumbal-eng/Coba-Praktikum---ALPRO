@@ -1,0 +1,185 @@
+{
+  "version": "7.0",
+  "nodes": [
+    {
+      "id": 1,
+      "type": "start",
+      "text": "Start",
+      "x": 58,
+      "y": 10,
+      "w": 150,
+      "h": 58
+    },
+    {
+      "id": 2,
+      "type": "input",
+      "text": "uang=100000*2",
+      "x": 219,
+      "y": 10,
+      "w": 190,
+      "h": 70
+    },
+    {
+      "id": 3,
+      "type": "process",
+      "text": "harga_awal_buku=25000; harga_awal_pulpen=8000; harga_awal_flashdisk=75000",
+      "x": 442,
+      "y": 90,
+      "w": 160,
+      "h": 155
+    },
+    {
+      "id": 4,
+      "type": "process",
+      "text": "total_harga_sebelum_diskon=total_harga_buku+total_harga_pulpen+total_harga_flashdisk",
+      "x": 437,
+      "y": 499,
+      "w": 170,
+      "h": 130
+    },
+    {
+      "id": 5,
+      "type": "process",
+      "text": "total_harga_buku=buku*harga_awal_buku; total_harga_pulpen=pulpen*harga_awal_pulpen; total_harga_flashdisk=flashdisk*harga_awal_flashdisk",
+      "x": 444,
+      "y": 257,
+      "w": 155,
+      "h": 230
+    },
+    {
+      "id": 8,
+      "type": "process",
+      "text": "diskon=10/100*total_harga_sebelum_diskon",
+      "x": 431,
+      "y": 652,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 9,
+      "type": "process",
+      "text": "total_harga_setelah_pajak=total_harga_setelah_diskon+pajak",
+      "x": 683,
+      "y": 268,
+      "w": 160,
+      "h": 110
+    },
+    {
+      "id": 10,
+      "type": "process",
+      "text": "total_harga_setelah_diskon=total_harga_sebelum_diskon-diskon",
+      "x": 674,
+      "y": 10,
+      "w": 180,
+      "h": 150
+    },
+    {
+      "id": 11,
+      "type": "process",
+      "text": "uang_kembalian=uang-total_harga_setelah_pajak",
+      "x": 702,
+      "y": 398,
+      "w": 125,
+      "h": 100
+    },
+    {
+      "id": 12,
+      "type": "process",
+      "text": "pajak=11/100*total_harga_setelah_diskon",
+      "x": 673,
+      "y": 180,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 13,
+      "type": "process",
+      "text": "buku=3; pulpen=2; flashdisk=1",
+      "x": 436,
+      "y": 10,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 14,
+      "type": "output",
+      "text": "total_harga_buku; total_harga_pulpen;  total_harga_flashdisk; total_harga_sebelum_diskon; diskon; total_harga_setelah_diskon; pajak; total_harga_setelah_pajak; uang_kembalian",
+      "x": 662,
+      "y": 517,
+      "w": 205,
+      "h": 85
+    },
+    {
+      "id": 15,
+      "type": "end",
+      "text": "End",
+      "x": 690,
+      "y": 622,
+      "w": 150,
+      "h": 58
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2,
+      "branch": null
+    },
+    {
+      "from": 2,
+      "to": 13,
+      "branch": null
+    },
+    {
+      "from": 13,
+      "to": 3,
+      "branch": null
+    },
+    {
+      "from": 3,
+      "to": 5,
+      "branch": null
+    },
+    {
+      "from": 5,
+      "to": 4,
+      "branch": null
+    },
+    {
+      "from": 4,
+      "to": 8,
+      "branch": null
+    },
+    {
+      "from": 8,
+      "to": 10,
+      "branch": null
+    },
+    {
+      "from": 10,
+      "to": 12,
+      "branch": null
+    },
+    {
+      "from": 14,
+      "to": 15,
+      "branch": null
+    },
+    {
+      "from": 12,
+      "to": 9,
+      "branch": null
+    },
+    {
+      "from": 9,
+      "to": 11,
+      "branch": null
+    },
+    {
+      "from": 11,
+      "to": 14,
+      "branch": null
+    }
+  ],
+  "nextId": 17
+}
